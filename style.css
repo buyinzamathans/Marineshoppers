@@ -27,11 +27,11 @@ body {
 }
 
 /* ==========================================================
-   Header / Navbar Background using 1786482891276.png
+   Header / Navbar Background using heroback.png
 ========================================================== */
 .navbar {
     /* A lighter cream tint overlay so the shelf image is clearly visible behind the logo */
-    background-image: linear-gradient(rgba(253, 251, 247, 0.75), rgba(253, 251, 247, 0.75)), url('1786482891276.png');
+    background-image: linear-gradient(rgba(253, 251, 247, 0.75), rgba(253, 251, 247, 0.75)), url('heroback.jpg');
     background-size: cover;
     background-position: center;
     width: 100%;
