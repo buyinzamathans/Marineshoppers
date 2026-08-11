@@ -121,7 +121,7 @@ body {
        - If the sign is too low, change '30%' to a higher number (e.g., '45%').
        - If the sign is too high, change it to a lower number (e.g., '15%').
     */
-    object-position: center 80%; 
+    object-position: center 30%; 
 }
 
 .hero-overlay {
