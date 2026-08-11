@@ -27,43 +27,31 @@ body {
 }
 
 /* ==========================================================
-   Header / Navbar Background (Brighter, clearer, blended)
+   Header / Navbar Background (Rich dark theme for seamless blending)
 ========================================================= */
 .navbar {
-    /* Use a subtle base tint as a fallback if the image is not available */
-    background-color: rgba(253, 251, 247, 0.22);
+    background-color: #141917; /* Deep tone matching the footer */
     width: 100%;
     padding: 14px 0; 
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     position: relative;
     z-index: 10;
-    overflow: hidden; /* keep pseudo-element contained */
+    overflow: hidden; 
 }
 
-/* Background image rendered in a pseudo-element so we can apply filters only to the image
-   without affecting the nav text/buttons. Place your chosen image at: assets/nav-hero-1.jpg
-   (I updated the CSS to reference that path; if you want a different filename/path, tell me).
-*/
 .navbar::before {
     content: "";
     position: absolute;
     inset: 0;
     background-image: url('assets/nav-hero-1.jpg');
     background-size: cover;
-    background-position: center 40%;
+    background-position: center;
     background-repeat: no-repeat;
-
-    /* Make the photo pop slightly while still blending with the light tint */
-    filter: brightness(1.08) contrast(1.06) saturate(1.05);
-    opacity: 0.98;
-
-    /* soften blend with the navbar tint so text remains readable */
-    mix-blend-mode: soft-light;
-
-    z-index: 0; /* sits underneath the nav content */
+    filter: brightness(0.8) contrast(1.05);
+    opacity: 0.25; /* subtle background texture */
+    z-index: 0; 
 }
 
-/* Ensure nav content stays above the image pseudo-element */
 .nav-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -79,19 +67,17 @@ body {
     font-family: var(--font-brand);
     font-size: 1.4rem; 
     font-weight: 800; 
-    color: var(--brand-green); 
+    color: #FFFFFF; /* White text so it looks striking on the dark navbar */
     letter-spacing: 0.5px;
     text-transform: uppercase;
     line-height: 1.1;
-    /* Subtle light shadow to help the text sit on top of the photo */
-    text-shadow: 0 1px 2px rgba(255,255,255,0.65);
 }
 
 .contact-btn {
     display: flex;
     align-items: center;
     gap: 8px;
-    background-color: rgba(37, 211, 102, 0.95); /* slight transparency to blend */
+    background-color: #25D366; 
     color: #fff;
     text-decoration: none;
     padding: 10px 20px;
@@ -108,7 +94,7 @@ body {
 }
 
 /* ==========================================================
-   Hero Section (Using phonbackground.png)
+   Hero Section (Adjusted to highlight storefront sign)
 ========================================================= */
 .hero-section {
     position: relative;
@@ -120,7 +106,8 @@ body {
     
     background-image: url('phonbackground.png');
     background-size: cover;
-    background-position: center;
+    /* Shifted down to display the physical store sign clearly */
+    background-position: center 30%; 
     background-repeat: no-repeat;
 }
 
@@ -132,11 +119,11 @@ body {
     height: 100%;
     background: linear-gradient(
         to bottom,
-        rgba(0, 0, 0, 0.25), 
-        rgba(0, 0, 0, 0.5)
+        rgba(0, 0, 0, 0.35), 
+        rgba(0, 0, 0, 0.6)
     );
     z-index: 1;
-    pointer-events: none; /* allow clicks through the overlay */
+    pointer-events: none; 
 }
 
 .hero-content {
