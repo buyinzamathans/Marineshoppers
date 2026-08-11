@@ -27,12 +27,15 @@ body {
 }
 
 /* ==========================================================
-   Compact, Sleek Header
+   Compact, Sleek Header with Image 1786482891276.png
 ========================================================== */
 .navbar {
-    background-color: var(--warm-bg);
+    /* Merging a heavy cream overlay with your provided image so text remains readable */
+    background-image: linear-gradient(rgba(253, 251, 247, 0.92), rgba(253, 251, 247, 0.92)), url('1786482891276.png');
+    background-size: cover;
+    background-position: center;
     width: 100%;
-    padding: 10px 0; 
+    padding: 12px 0; 
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
     position: relative;
     z-index: 10;
@@ -49,7 +52,7 @@ body {
 
 .brand {
     font-family: var(--font-brand);
-    font-size: 1.4rem; /* Adjusted for the stacked look from screenshot */
+    font-size: 1.4rem; 
     font-weight: 800; 
     color: var(--brand-green); 
     letter-spacing: 0.5px;
@@ -78,7 +81,7 @@ body {
 }
 
 /* ==========================================================
-   Hero Section (Vibrant Grocery Background)
+   Hero Section (Loading phonbackground.png)
 ========================================================== */
 .hero-section {
     position: relative;
@@ -88,15 +91,13 @@ body {
     justify-content: center;
     text-align: center;
     
-    /* I am using a vibrant placeholder grocery store image. 
-       Change the URL below to your own image name when ready! */
-    background-image: url('https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=1974&auto=format&fit=crop');
+    /* Looking for your local file to guarantee instant loading */
+    background-image: url('phonbackground.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
-/* Much lighter gradient overlay just to blend the edges, letting the colors pop */
 .hero-overlay {
     position: absolute;
     top: 0;
@@ -105,8 +106,8 @@ body {
     height: 100%;
     background: linear-gradient(
         to bottom,
-        rgba(0, 0, 0, 0.2), 
-        rgba(0, 0, 0, 0.45)
+        rgba(0, 0, 0, 0.25), 
+        rgba(0, 0, 0, 0.5)
     );
     z-index: 1;
 }
@@ -118,7 +119,6 @@ body {
     padding: 40px 20px;
 }
 
-/* Added heavy text-shadow so the white text reads clearly over a bright background */
 .hero-content h1 {
     font-family: var(--font-hero);
     font-size: 3.8rem;
@@ -138,7 +138,6 @@ body {
     text-shadow: 1px 2px 6px rgba(0,0,0,0.8);
 }
 
-/* The Start Shopping CTA */
 .cta-button {
     display: inline-block;
     text-decoration: none;
