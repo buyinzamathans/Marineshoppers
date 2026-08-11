@@ -1,11 +1,11 @@
 /* ==========================================================
-   Base Styles & Colors (No Pure White)
+   Base Styles & Colors 
 ========================================================== */
 :root {
-    --brand-green: #008744;     /* A rich, vibrant supermarket green */
-    --warm-bg: #FDFBF7;         /* A warm, inviting off-white/cream */
+    --brand-green: #008744;     
+    --warm-bg: #FDFBF7;         
     --text-dark: #2C332F;
-    --btn-gold: #F4C430;        /* Warm, inviting button color */
+    --btn-gold: #F4C430;        
     
     --font-brand: 'Outfit', sans-serif;
     --font-hero: 'Lora', serif;
@@ -32,8 +32,8 @@ body {
 .navbar {
     background-color: var(--warm-bg);
     width: 100%;
-    padding: 12px 0; /* Drastically shortened height */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    padding: 10px 0; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
     position: relative;
     z-index: 10;
 }
@@ -49,104 +49,114 @@ body {
 
 .brand {
     font-family: var(--font-brand);
-    font-size: 1.6rem;
-    font-weight: 800; /* Extra bold */
-    color: var(--brand-green); /* Total green */
+    font-size: 1.4rem; /* Adjusted for the stacked look from screenshot */
+    font-weight: 800; 
+    color: var(--brand-green); 
     letter-spacing: 0.5px;
     text-transform: uppercase;
+    line-height: 1.1;
 }
 
 .contact-btn {
     display: flex;
     align-items: center;
     gap: 8px;
-    background-color: #25D366; /* WhatsApp brand color */
+    background-color: #25D366; 
     color: #fff;
     text-decoration: none;
-    padding: 8px 16px;
+    padding: 10px 20px;
     border-radius: 50px;
-    font-size: 0.95rem;
-    font-weight: 600;
-    transition: background-color 0.2s ease;
+    font-size: 1.05rem;
+    font-weight: 700;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3);
 }
 
 .contact-btn:hover {
     background-color: #1DA851;
+    transform: translateY(-2px);
 }
 
 /* ==========================================================
-   Hero Section (Basic Background, No Parallax)
+   Hero Section (Vibrant Grocery Background)
 ========================================================== */
 .hero-section {
     position: relative;
-    flex: 1; /* Takes up remaining screen space */
+    flex: 1; 
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     
-    /* Basic background styling - referencing the image */
-    background-image: url('1782843851765.png');
+    /* I am using a vibrant placeholder grocery store image. 
+       Change the URL below to your own image name when ready! */
+    background-image: url('https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=1974&auto=format&fit=crop');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
-/* Warm, slightly transparent overlay so it doesn't look gloomy */
+/* Much lighter gradient overlay just to blend the edges, letting the colors pop */
 .hero-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(30, 40, 30, 0.65); /* A subtle greenish-dark tint */
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.2), 
+        rgba(0, 0, 0, 0.45)
+    );
     z-index: 1;
 }
 
 .hero-content {
     position: relative;
     z-index: 2;
-    max-width: 700px;
+    max-width: 750px;
     padding: 40px 20px;
 }
 
+/* Added heavy text-shadow so the white text reads clearly over a bright background */
 .hero-content h1 {
     font-family: var(--font-hero);
-    font-size: 3.5rem;
-    color: #FFF9F0; /* Warm off-white for text */
+    font-size: 3.8rem;
+    color: #FFFFFF; 
     line-height: 1.15;
     margin-bottom: 20px;
-    text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+    text-shadow: 2px 4px 8px rgba(0,0,0,0.7), 0 0 30px rgba(0,0,0,0.5);
 }
 
 .hero-content p {
     font-family: var(--font-brand);
-    font-size: 1.15rem;
-    color: #F0EDE6;
+    font-size: 1.25rem;
+    color: #FDFBF7;
     margin-bottom: 35px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 1.5;
+    text-shadow: 1px 2px 6px rgba(0,0,0,0.8);
 }
 
-/* The "Breathe the new item smell" CTA */
+/* The Start Shopping CTA */
 .cta-button {
     display: inline-block;
     text-decoration: none;
     background-color: var(--btn-gold);
     color: #111;
-    padding: 16px 45px;
-    font-size: 1.15rem;
+    padding: 18px 50px;
+    font-size: 1.2rem;
     font-weight: 800;
     letter-spacing: 1px;
-    border-radius: 6px;
+    border-radius: 8px;
     text-transform: uppercase;
-    box-shadow: 0 4px 15px rgba(244, 196, 48, 0.3);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
     transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
 .cta-button:hover {
-    background-color: #E3B420;
-    transform: scale(1.03);
+    background-color: #FDE047;
+    transform: scale(1.05);
 }
 
 /* ==========================================================
@@ -157,7 +167,7 @@ body {
     color: #A9B3AD;
     text-align: center;
     padding: 25px 20px;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
 }
 
 .simple-footer p {
@@ -165,7 +175,7 @@ body {
 }
 
 .simple-footer strong {
-    color: var(--brand-green);
+    color: #25D366;
     font-weight: 700;
 }
 
@@ -174,14 +184,18 @@ body {
 ========================================================== */
 @media (max-width: 600px) {
     .hero-content h1 {
-        font-size: 2.6rem;
+        font-size: 2.8rem;
     }
     
     .brand {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
     }
     
     .contact-btn span {
-        display: none; /* Can hide text on very small screens if needed */
+        display: none; 
+    }
+
+    .hero-content p {
+        font-size: 1.1rem;
     }
 }
