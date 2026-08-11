@@ -66,7 +66,7 @@ body {
     font-family: var(--font-brand);
     font-size: 1.4rem; 
     font-weight: 800; 
-    color: var(--brand-green); /* Back to your crisp green brand color */
+    color: var(--brand-green); 
     letter-spacing: 0.5px;
     text-transform: uppercase;
     line-height: 1.1;
@@ -93,8 +93,8 @@ body {
 }
 
 /* ==========================================================
-   Hero Section (Shifted up to highlight the store sign)
-========================================================= */
+   Hero Section & Direct Image Control
+========================================================== */
 .hero-section {
     position: relative;
     flex: 1; 
@@ -102,12 +102,26 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
+    overflow: hidden; /* Keeps the shifted image neatly contained */
+    background-color: #1a1a1a;
+}
+
+/* This targets the real storefront image element directly */
+.hero-bg-img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     
-    background-image: url('phonbackground.png');
-    background-size: cover;
-    /* Shifts the image up to center the store sign behind your text */
-    background-position: center 18%; 
-    background-repeat: no-repeat;
+    /* CONTROL PANEL: 
+       Adjust this value to slide the image up or down.
+       - If the sign is too low, change '30%' to a higher number (e.g., '45%').
+       - If the sign is too high, change it to a lower number (e.g., '15%').
+    */
+    object-position: center 30%; 
 }
 
 .hero-overlay {
@@ -173,7 +187,7 @@ body {
 
 /* ==========================================================
    Footer
-========================================================= */
+========================================================== */
 .simple-footer {
     background-color: #1A211D;
     color: #A9B3AD;
@@ -193,7 +207,7 @@ body {
 
 /* ==========================================================
    Mobile Adjustments
-========================================================= */
+========================================================== */
 @media (max-width: 600px) {
     .hero-content h1 {
         font-size: 2.8rem;
