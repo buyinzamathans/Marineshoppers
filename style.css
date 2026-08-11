@@ -1,5 +1,99 @@
 /* ==========================================================
-   Hero Section (Aligned to put the green store sign under the text)
+   Base Styles & Colors 
+========================================================== */
+:root {
+    --brand-green: #008744;     
+    --warm-bg: #FDFBF7;         
+    --text-dark: #2C332F;
+    --btn-gold: #F4C430;        
+    
+    --font-brand: 'Outfit', sans-serif;
+    --font-hero: 'Lora', serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-brand);
+    background-color: var(--warm-bg);
+    color: var(--text-dark);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ==========================================================
+   Header / Navbar Background (Light, warm, and clean)
+========================================================= */
+.navbar {
+    background-color: #F4EEDC; /* Soft, warm, light cream tone */
+    width: 100%;
+    padding: 14px 0; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    position: relative;
+    z-index: 10;
+    overflow: hidden; 
+}
+
+.navbar::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url('assets/nav-hero-1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.12; /* very faint texture */
+    z-index: 0; 
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.brand {
+    font-family: var(--font-brand);
+    font-size: 1.4rem; 
+    font-weight: 800; 
+    color: var(--brand-green); /* Back to your crisp green brand color */
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    line-height: 1.1;
+}
+
+.contact-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #25D366; 
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 1.05rem;
+    font-weight: 700;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+}
+
+.contact-btn:hover {
+    background-color: #1DA851;
+    transform: translateY(-2px);
+}
+
+/* ==========================================================
+   Hero Section (Shifted up to highlight the store sign)
 ========================================================= */
 .hero-section {
     position: relative;
@@ -11,7 +105,120 @@
     
     background-image: url('phonbackground.png');
     background-size: cover;
-    /* Shifts the image to lock the storefront sign right under the heading */
-    background-position: center 38%; 
+    /* Shifts the image up to center the store sign behind your text */
+    background-position: center 18%; 
     background-repeat: no-repeat;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.3), 
+        rgba(0, 0, 0, 0.55)
+    );
+    z-index: 1;
+    pointer-events: none; 
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 750px;
+    padding: 40px 20px;
+}
+
+.hero-content h1 {
+    font-family: var(--font-hero);
+    font-size: 3.8rem;
+    color: #FFFFFF; 
+    line-height: 1.15;
+    margin-bottom: 20px;
+    text-shadow: 2px 4px 8px rgba(0,0,0,0.7), 0 0 30px rgba(0,0,0,0.5);
+}
+
+.hero-content p {
+    font-family: var(--font-brand);
+    font-size: 1.25rem;
+    color: #FDFBF7;
+    margin-bottom: 35px;
+    font-weight: 500;
+    line-height: 1.5;
+    text-shadow: 1px 2px 6px rgba(0,0,0,0.8);
+}
+
+.cta-button {
+    display: inline-block;
+    text-decoration: none;
+    background-color: var(--btn-gold);
+    color: #111;
+    padding: 18px 50px;
+    font-size: 1.2rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    border-radius: 8px;
+    text-transform: uppercase;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.cta-button:hover {
+    background-color: #FDE047;
+    transform: scale(1.05);
+}
+
+/* ==========================================================
+   Footer
+========================================================= */
+.simple-footer {
+    background-color: #1A211D;
+    color: #A9B3AD;
+    text-align: center;
+    padding: 25px 20px;
+    font-size: 0.95rem;
+}
+
+.simple-footer p {
+    margin: 5px 0;
+}
+
+.simple-footer strong {
+    color: #25D366;
+    font-weight: 700;
+}
+
+/* ==========================================================
+   Mobile Adjustments
+========================================================= */
+@media (max-width: 600px) {
+    .hero-content h1 {
+        font-size: 2.8rem;
+    }
+    
+    .brand {
+        font-size: 1.2rem;
+    }
+    
+    .contact-btn span {
+        display: none; 
+    }
+
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .contact-btn,
+  .cta-button,
+  .contact-btn:hover,
+  .cta-button:hover {
+    transition: none !important;
+    transform: none !important;
+  }
 }
