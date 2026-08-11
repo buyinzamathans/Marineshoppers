@@ -27,15 +27,15 @@ body {
 }
 
 /* ==========================================================
-   Compact, Sleek Header with Image 1786482891276.png
+   Header / Navbar Background using 1786482891276.png
 ========================================================== */
 .navbar {
-    /* Merging a heavy cream overlay with your provided image so text remains readable */
-    background-image: linear-gradient(rgba(253, 251, 247, 0.92), rgba(253, 251, 247, 0.92)), url('1786482891276.png');
+    /* A lighter cream tint overlay so the shelf image is clearly visible behind the logo */
+    background-image: linear-gradient(rgba(253, 251, 247, 0.75), rgba(253, 251, 247, 0.75)), url('1786482891276.png');
     background-size: cover;
     background-position: center;
     width: 100%;
-    padding: 12px 0; 
+    padding: 14px 0; 
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
     position: relative;
     z-index: 10;
@@ -58,6 +58,7 @@ body {
     letter-spacing: 0.5px;
     text-transform: uppercase;
     line-height: 1.1;
+    text-shadow: 0 1px 2px rgba(255,255,255,0.8);
 }
 
 .contact-btn {
@@ -81,7 +82,7 @@ body {
 }
 
 /* ==========================================================
-   Hero Section (Loading phonbackground.png)
+   Hero Section (Using phonbackground.png)
 ========================================================== */
 .hero-section {
     position: relative;
@@ -91,7 +92,6 @@ body {
     justify-content: center;
     text-align: center;
     
-    /* Looking for your local file to guarantee instant loading */
     background-image: url('phonbackground.png');
     background-size: cover;
     background-position: center;
