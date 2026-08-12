@@ -147,8 +147,14 @@ section {
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 100%;
+    /* Ensure the image always fills the hero area without leaving white bars
+       on very wide viewports: prefer filling the height and allow the width
+       to scale beyond the container. Overriding the global img max-width so
+       the image can grow when needed. */
     height: 100%;
+    width: auto;
+    min-width: 100%;
+    max-width: none;
     object-fit: cover;
 
     /* CONTROL PANEL:
