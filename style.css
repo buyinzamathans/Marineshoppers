@@ -1,0 +1,542 @@
+/* ==========================================================
+   Base Styles & Colors
+========================================================== */
+:root {
+    --brand-green: #008744;
+    --brand-green-dark: #00602f;
+    --warm-bg: #FDFBF7;
+    --warm-bg-alt: #F4EEDC;
+    --text-dark: #2C332F;
+    --text-muted: #5C6660;
+    --btn-gold: #F4C430;
+
+    --font-brand: 'Outfit', sans-serif;
+    --font-hero: 'Lora', serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-brand);
+    background-color: var(--warm-bg);
+    color: var(--text-dark);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+section {
+    padding: 90px 20px;
+}
+
+.eyebrow {
+    display: inline-block;
+    font-family: var(--font-brand);
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    color: var(--brand-green);
+    margin-bottom: 10px;
+}
+
+/* ==========================================================
+   Header / Navbar
+========================================================== */
+.navbar {
+    background-color: var(--warm-bg-alt);
+    width: 100%;
+    padding: 14px 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.brand {
+    font-family: var(--font-brand);
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--brand-green);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    line-height: 1.1;
+    text-decoration: none;
+    flex-shrink: 0;
+}
+
+.nav-links {
+    display: flex;
+    gap: 28px;
+    margin: 0 auto;
+}
+
+.nav-links a {
+    color: var(--text-dark);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.98rem;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: var(--brand-green);
+}
+
+.contact-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #25D366;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 1.02rem;
+    font-weight: 700;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+    flex-shrink: 0;
+}
+
+.contact-btn:hover {
+    background-color: #1DA851;
+    transform: translateY(-2px);
+}
+
+/* ==========================================================
+   Hero Photo
+   The storefront (and the "MARINE SHOPPERS" sign) stays fully
+   visible here — no headline text is ever placed on top of it.
+   Only a small location chip and a soft bottom fade sit on the
+   photo itself.
+========================================================== */
+.hero-section {
+    position: relative;
+    overflow: hidden;
+    background-color: #1a1a1a;
+    height: 72vh;
+    min-height: 420px;
+    max-height: 760px;
+}
+
+.hero-bg-img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    /* CONTROL PANEL:
+       Adjust this value to slide the visible crop up or down
+       so the "MARINE SHOPPERS" sign stays centered in frame. */
+    object-position: center 32%;
+}
+
+.hero-fade {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.15) 0%,
+        rgba(0, 0, 0, 0) 18%,
+        rgba(0, 0, 0, 0) 82%,
+        rgba(26, 26, 26, 0.95) 100%
+    );
+    pointer-events: none;
+}
+
+.hero-tag {
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(4px);
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+/* ==========================================================
+   Hero Intro
+   Sits directly below the photo on a solid background, so the
+   headline never competes with the storefront image.
+========================================================== */
+.hero-intro {
+    background: var(--brand-green);
+    color: #fff;
+    text-align: center;
+    padding: 60px 20px 70px;
+}
+
+.hero-intro h1 {
+    font-family: var(--font-hero);
+    font-size: 3rem;
+    line-height: 1.15;
+    margin-bottom: 18px;
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-intro p {
+    font-family: var(--font-brand);
+    font-size: 1.1rem;
+    margin: 0 auto 32px;
+    max-width: 620px;
+    font-weight: 500;
+    line-height: 1.55;
+    color: rgba(255, 255, 255, 0.92);
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+}
+
+/* ==========================================================
+   Buttons
+========================================================== */
+.cta-button {
+    display: inline-block;
+    text-decoration: none;
+    background-color: var(--btn-gold);
+    color: #111;
+    padding: 16px 42px;
+    font-size: 1.1rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    border-radius: 8px;
+    text-transform: uppercase;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.cta-button:hover {
+    background-color: #FDE047;
+    transform: scale(1.05);
+}
+
+.cta-secondary {
+    display: inline-block;
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1.5px solid rgba(255, 255, 255, 0.75);
+    color: #fff;
+    padding: 15px 40px;
+    font-size: 1.05rem;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    border-radius: 8px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.cta-secondary:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: scale(1.03);
+}
+
+.cta-secondary.dark {
+    border-color: var(--brand-green);
+    color: var(--brand-green);
+    background: transparent;
+}
+
+.cta-secondary.dark:hover {
+    background: var(--brand-green);
+    color: #fff;
+}
+
+/* ==========================================================
+   Products / Groceries Section
+========================================================== */
+.products-section {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto 50px;
+}
+
+.section-heading h2 {
+    font-family: var(--font-hero);
+    font-size: 2.3rem;
+    margin-bottom: 14px;
+    color: var(--text-dark);
+}
+
+.section-heading p {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-bottom: 50px;
+}
+
+.category-card {
+    background: #fff;
+    border: 1px solid rgba(0,0,0,0.06);
+    border-radius: 16px;
+    padding: 32px 20px;
+    text-align: center;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.09);
+}
+
+.category-icon {
+    font-size: 2.4rem;
+    margin-bottom: 14px;
+}
+
+.category-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    color: var(--text-dark);
+}
+
+.category-card p {
+    font-size: 0.92rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+.products-cta {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.products-cta .cta-button {
+    box-shadow: 0 6px 20px rgba(244, 196, 48, 0.35);
+}
+
+/* ==========================================================
+   Features Section
+========================================================== */
+.features-section {
+    background: var(--brand-green);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 24px;
+    color: #fff;
+}
+
+.feature {
+    text-align: center;
+    padding: 10px 16px;
+}
+
+.feature-icon {
+    font-size: 2.2rem;
+    margin-bottom: 14px;
+}
+
+.feature h3 {
+    font-size: 1.15rem;
+    margin-bottom: 10px;
+}
+
+.feature p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: rgba(255,255,255,0.9);
+}
+
+/* ==========================================================
+   Location Section
+========================================================== */
+.location-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.location-info h2 {
+    font-family: var(--font-hero);
+    font-size: 2.2rem;
+    margin-bottom: 16px;
+}
+
+.location-address {
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: var(--text-dark);
+}
+
+.location-info p {
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+.location-info p.location-address {
+    color: var(--text-dark);
+}
+
+.location-map {
+    width: 100%;
+    height: 360px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+
+/* ==========================================================
+   Footer
+========================================================== */
+.simple-footer {
+    background-color: #1A211D;
+    color: #A9B3AD;
+    text-align: center;
+    padding: 40px 20px 30px;
+    font-size: 0.95rem;
+}
+
+.footer-brand {
+    font-family: var(--font-brand);
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: #25D366;
+    font-size: 1.15rem;
+    margin-bottom: 10px;
+}
+
+.simple-footer p {
+    margin: 5px 0;
+}
+
+.thank-you {
+    margin-top: 14px;
+    color: #FDFBF7;
+    font-weight: 600;
+}
+
+/* ==========================================================
+   Mobile Adjustments
+========================================================== */
+@media (max-width: 900px) {
+    .nav-links {
+        display: none;
+    }
+
+    .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .features-section {
+        grid-template-columns: 1fr;
+        padding: 50px 30px;
+        gap: 34px;
+    }
+
+    .location-section {
+        grid-template-columns: 1fr;
+    }
+
+    .location-map {
+        height: 280px;
+    }
+}
+
+@media (max-width: 600px) {
+    section {
+        padding: 60px 18px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.3rem;
+    }
+
+    .hero-content p {
+        font-size: 1.02rem;
+    }
+
+    .brand {
+        font-size: 1.15rem;
+    }
+
+    .contact-btn span {
+        display: none;
+    }
+
+    .hero-tag {
+        font-size: 0.75rem;
+        padding: 6px 12px;
+        top: 16px;
+        left: 16px;
+    }
+
+    .category-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+    }
+
+    .section-heading h2 {
+        font-size: 1.8rem;
+    }
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .contact-btn,
+  .cta-button,
+  .cta-secondary,
+  .scroll-cue,
+  .category-card {
+    transition: none !important;
+    animation: none !important;
+    transform: none !important;
+  }
+}
