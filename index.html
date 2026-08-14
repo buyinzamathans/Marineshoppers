@@ -3,139 +3,211 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marine Shoppers | Fresh Groceries in Luzira, Kampala</title>
-    <meta name="description" content="Marine Shoppers - your neighborhood supermarket in Luzira, Kampala, next to Bank of Africa. Order fresh produce and daily essentials instantly on WhatsApp.">
+    <title>Marine Shoppers | Everyday Essentials in Luzira, Kampala</title>
+    <meta name="description" content="Marine Shoppers - a WhatsApp-powered supermarket in Luzira, Kampala, next to Bank of Africa. Fresh produce, pantry staples and household essentials, ordered straight to chat.">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,700;1,500&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,600&family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Header / Navbar -->
+    <!-- Header -->
     <header class="navbar" id="home">
         <div class="nav-container">
-            <a href="#home" class="brand">MARINE<br>SHOPPERS</a>
+            <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
 
-            <nav class="nav-links">
+            <a href="#home" class="brand">
+                <svg class="brand-mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 8h4l2.5 17.5a2 2 0 0 0 2 1.7h13a2 2 0 0 0 2-1.6L32 13H12" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+                    <circle cx="16" cy="33" r="2.2" fill="currentColor"/>
+                    <circle cx="27" cy="33" r="2.2" fill="currentColor"/>
+                    <text x="20" y="12" text-anchor="middle" font-family="Outfit, sans-serif" font-weight="800" font-size="11" fill="currentColor">M</text>
+                </svg>
+                <span class="brand-text">
+                    MARINE SHOPPERS
+                    <small>Everyday Essentials, Closer to You</small>
+                </span>
+            </a>
+
+            <nav class="nav-links" id="navLinks">
                 <a href="#home">Home</a>
-                <a href="#products">Products</a>
+                <a href="#departments">Departments</a>
+                <a href="#store">Our Store</a>
                 <a href="#location">Location</a>
             </nav>
 
-            <a href="https://wa.me/256702771208?text=Hello%20Marine%20Shoppers,%20I%20need%20help." class="contact-btn">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
-                    <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c-.003 1.396.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.005-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+            <a href="tel:+256702771208" class="contact-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
                 </svg>
-                <span>Contact Us</span>
+                <span>Call Us</span>
             </a>
         </div>
     </header>
 
-    <!-- Hero: the storefront photo carries the page. Information is
-         "attached" to it — a small location tag up top, and a
-         mounted plaque low on the wall — rather than a bar laid
-         flat across the whole image. -->
-    <main class="hero-section">
-        <img src="phonbackground.png" alt="Marine Shoppers storefront in Luzira, Kampala" class="hero-bg-img">
+    <!-- Hero -->
+    <section class="hero">
+        <img src="images/hero-aisle.jpg" alt="" class="hero-bg" aria-hidden="true">
+        <div class="hero-scrim"></div>
 
-        <div class="hero-tag">Luzira, Kampala &nbsp;&middot;&nbsp; Next to Bank of Africa</div>
+        <div class="hero-inner">
+            <p class="hero-kicker">Luzira, Kampala &nbsp;&middot;&nbsp; Next to Bank of Africa</p>
+            <h1 class="hero-heading">Everyday Essentials,<br><span>Delivered Fresh.</span></h1>
+            <p class="hero-script">Quality you can trust</p>
+            <p class="hero-sub">Fresh produce, pantry staples, household essentials &amp; more — ordered straight to WhatsApp.</p>
+            <a href="https://wa.me/256702771208?text=Hello%20Marine%20Shoppers!%20Here%20is%20my%20shopping%20list:%0A1.%20" class="hero-cta">
+                Start Shopping
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+            </a>
+        </div>
+    </section>
 
-        <div class="hero-plaque">
-            <h1>Fresh Groceries,<br>Delivered to Your Door.</h1>
-            <div class="hero-buttons">
-                <a href="https://wa.me/256702771208?text=Hello%20Marine%20Shoppers!%20Here%20is%20my%20shopping%20list:%0A1.%20" class="cta-button">Start Shopping</a>
-                <a href="#products" class="cta-secondary dark">Browse Products</a>
+    <!-- Trust bar, floating over the hero/section boundary -->
+    <div class="trust-bar-wrap">
+        <div class="trust-bar">
+            <div class="trust-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="7" width="15" height="11"/><path d="M16 10h4l3 3v4h-7z"/><circle cx="6" cy="20" r="1.6"/><circle cx="18" cy="20" r="1.6"/></svg>
+                <div><strong>Fast Delivery</strong><span>To your doorstep</span></div>
+            </div>
+            <div class="trust-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.4 8.6 8 11 4.6-2.4 8-6 8-11V5z"/><path d="m9 12 2 2 4-4"/></svg>
+                <div><strong>Quality Assured</strong><span>Genuine products</span></div>
+            </div>
+            <div class="trust-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v9.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V10"/></svg>
+                <div><strong>Local &amp; Trusted</strong><span>Your Luzira supermarket</span></div>
+            </div>
+            <div class="trust-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z"/></svg>
+                <div><strong>Always Here</strong><span>Ready on WhatsApp</span></div>
             </div>
         </div>
-    </main>
+    </div>
 
-    <!-- Products / Groceries -->
-    <section class="products-section" id="products">
+    <!-- Shop by Departments -->
+    <section class="departments" id="departments">
         <div class="section-heading">
-            <span class="eyebrow">What We Stock</span>
+            <span class="eyebrow">Shop by Department</span>
             <h2>Everything on Your List</h2>
-            <p>Our full catalog is on its way. For now, order any of these straight to WhatsApp.</p>
+            <p>Our full catalog is on its way — for now, order any of these straight to WhatsApp.</p>
         </div>
 
-        <div class="category-grid">
-            <div class="category-card">
-                <div class="category-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4 20 2c1.6 8.1-.5 12-4 14-1.5.9-3 2-4 3.9"/><path d="M4.8 13.6A4 4 0 0 0 7.9 20"/></svg>
-                </div>
-                <h3>Fresh Produce</h3>
-                <p>Fruits, vegetables &amp; herbs, sourced daily.</p>
-            </div>
-            <div class="category-card">
-                <div class="category-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="13" rx="1.5"/><path d="M3 8 12 3l9 5"/><path d="M12 12v6"/><path d="M9 15h6"/></svg>
-                </div>
-                <h3>Bakery &amp; Pantry</h3>
-                <p>Bread, grains, oils &amp; everyday staples.</p>
-            </div>
-            <div class="category-card">
-                <div class="category-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 8 12 3 4 8v9a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V8Z"/><path d="M9 21v-6a3 3 0 0 1 6 0v6"/></svg>
-                </div>
-                <h3>Gourmet &amp; Dairy</h3>
-                <p>Cheeses, deli items &amp; specialty imports.</p>
-            </div>
-            <div class="category-card">
-                <div class="category-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2h4v3.5l2 2.5v12a1.5 1.5 0 0 1-1.5 1.5h-5A1.5 1.5 0 0 1 8 20V8l2-2.5Z"/><path d="M8 13h8"/></svg>
-                </div>
-                <h3>Household Essentials</h3>
-                <p>Cleaning, toiletries &amp; home care.</p>
-            </div>
-        </div>
-
-        <div class="products-cta">
-            <a href="products.html" class="cta-button">Browse Full Catalog</a>
-            <a href="https://wa.me/256702771208?text=Hello%20Marine%20Shoppers!%20Here%20is%20my%20shopping%20list:%0A1.%20" class="cta-secondary dark">Order on WhatsApp</a>
+        <div class="dept-grid">
+            <a href="https://wa.me/256702771208?text=Hi%20Marine%20Shoppers%2C%20I%27d%20like%20to%20order%20Fresh%20Produce" class="dept-card">
+                <img src="images/dept-produce.jpg" alt="Fresh Produce">
+                <div class="dept-label"><strong>Fresh Produce</strong><span>Picked Daily</span></div>
+            </a>
+            <a href="https://wa.me/256702771208?text=Hi%20Marine%20Shoppers%2C%20I%27d%20like%20to%20order%20Bakery%20%26%20Pantry%20items" class="dept-card">
+                <img src="images/dept-bakery.jpg" alt="Bakery and Pantry">
+                <div class="dept-label"><strong>Bakery &amp; Pantry</strong><span>Everyday Staples</span></div>
+            </a>
+            <a href="https://wa.me/256702771208?text=Hi%20Marine%20Shoppers%2C%20I%27d%20like%20to%20order%20Gourmet%20%26%20Dairy%20items" class="dept-card">
+                <img src="images/dept-gourmet.jpg" alt="Gourmet and Dairy">
+                <div class="dept-label"><strong>Gourmet &amp; Dairy</strong><span>Specialty Picks</span></div>
+            </a>
+            <a href="https://wa.me/256702771208?text=Hi%20Marine%20Shoppers%2C%20I%27d%20like%20to%20order%20Household%20Essentials" class="dept-card">
+                <img src="images/dept-household.jpg" alt="Household Essentials">
+                <div class="dept-label"><strong>Household Essentials</strong><span>For a Cleaner Home</span></div>
+            </a>
         </div>
     </section>
 
-    <!-- Why Marine Shoppers -->
-    <section class="features-section">
-        <div class="feature">
-            <div class="feature-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z"/></svg>
-            </div>
-            <h3>Instant WhatsApp Orders</h3>
-            <p>Send your list, we confirm in minutes.</p>
-        </div>
-        <div class="feature">
-            <div class="feature-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m9 12 2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
-            </div>
-            <h3>Fresh, Quality Stock</h3>
-            <p>Restocked daily, always at its best.</p>
-        </div>
-        <div class="feature">
-            <div class="feature-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v9.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V10"/></svg>
-            </div>
-            <h3>Local &amp; Trusted</h3>
-            <p>Serving Luzira, next to Bank of Africa.</p>
+    <!-- Promo banner -->
+    <section class="promo">
+        <img src="images/promo-night.jpg" alt="" class="promo-bg" aria-hidden="true">
+        <div class="promo-scrim"></div>
+        <div class="promo-content">
+            <h2>Stock Up on Your <span>Daily Essentials</span></h2>
+            <p>Top brands, great prices, always available.</p>
+            <a href="https://wa.me/256702771208?text=Hello%20Marine%20Shoppers!%20Here%20is%20my%20shopping%20list:%0A1.%20" class="hero-cta">
+                Shop Now
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+            </a>
         </div>
     </section>
 
-    <!-- Location -->
-    <section class="location-section" id="location">
-        <div class="location-info">
+    <!-- Popular Picks -->
+    <section class="picks">
+        <div class="section-heading row">
+            <div>
+                <span class="eyebrow">Popular Picks</span>
+                <h2>Bestsellers This Week</h2>
+            </div>
+        </div>
+
+        <div class="picks-grid">
+            <div class="pick-card">
+                <img src="images/pick-tomatoes.jpg" alt="Fresh Tomatoes">
+                <div class="pick-info">
+                    <strong>Fresh Tomatoes</strong>
+                    <a href="https://wa.me/256702771208?text=Hi%2C%20I%27d%20like%20to%20order%20Fresh%20Tomatoes" aria-label="Order Fresh Tomatoes on WhatsApp">
+                        <svg viewBox="0 0 16 16" fill="currentColor"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c-.003 1.396.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592z"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="pick-card">
+                <img src="images/pick-bread.jpg" alt="Bread Loaf">
+                <div class="pick-info">
+                    <strong>Bread Loaf</strong>
+                    <a href="https://wa.me/256702771208?text=Hi%2C%20I%27d%20like%20to%20order%20a%20Bread%20Loaf" aria-label="Order Bread Loaf on WhatsApp">
+                        <svg viewBox="0 0 16 16" fill="currentColor"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c-.003 1.396.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592z"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="pick-card">
+                <img src="images/pick-oil.jpg" alt="Cooking Oil">
+                <div class="pick-info">
+                    <strong>Cooking Oil 5L</strong>
+                    <a href="https://wa.me/256702771208?text=Hi%2C%20I%27d%20like%20to%20order%20Cooking%20Oil%205L" aria-label="Order Cooking Oil on WhatsApp">
+                        <svg viewBox="0 0 16 16" fill="currentColor"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c-.003 1.396.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592z"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="pick-card">
+                <img src="images/pick-soap.jpg" alt="Dish Soap">
+                <div class="pick-info">
+                    <strong>Dish Soap</strong>
+                    <a href="https://wa.me/256702771208?text=Hi%2C%20I%27d%20like%20to%20order%20Dish%20Soap" aria-label="Order Dish Soap on WhatsApp">
+                        <svg viewBox="0 0 16 16" fill="currentColor"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c-.003 1.396.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visit Our Store: the real photo, left completely clean -->
+    <section class="store" id="store">
+        <div class="section-heading">
             <span class="eyebrow">Find Us</span>
             <h2>Visit Marine Shoppers</h2>
-            <p class="location-address">Luzira, Kampala &mdash; next to Bank of Africa</p>
-            <p>Drop by in person, or order ahead on WhatsApp for pickup.</p>
-            <a href="https://www.google.com/maps/search/?api=1&query=Bank%20of%20Africa%20Luzira%20Kampala" class="cta-secondary dark" target="_blank" rel="noopener">Get Directions</a>
+            <p>Come see us in person, right in the heart of Luzira.</p>
         </div>
-        <div class="location-map">
-            <iframe
-                title="Marine Shoppers location map"
-                src="https://www.google.com/maps?q=Bank+of+Africa+Luzira+Kampala&output=embed"
-                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
+
+        <div class="store-grid">
+            <figure class="store-photo">
+                <img src="images/store-day.jpg" alt="Marine Shoppers storefront in Luzira, Kampala">
+                <figcaption>
+                    <strong>Luzira, Kampala</strong>
+                    <span>Next to Bank of Africa</span>
+                </figcaption>
+            </figure>
+
+            <div class="store-map" id="location">
+                <iframe
+                    title="Marine Shoppers location map"
+                    src="https://www.google.com/maps?q=Bank+of+Africa+Luzira+Kampala&output=embed"
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+
+        <div class="store-cta">
+            <a href="https://www.google.com/maps/search/?api=1&query=Bank%20of%20Africa%20Luzira%20Kampala" class="btn-outline" target="_blank" rel="noopener">Get Directions</a>
+            <a href="https://wa.me/256702771208?text=Hello%20Marine%20Shoppers!%20Here%20is%20my%20shopping%20list:%0A1.%20" class="btn-outline whatsapp">Order on WhatsApp</a>
         </div>
     </section>
 
@@ -145,6 +217,46 @@
         <p>Luzira, Kampala &middot; next to Bank of Africa</p>
         <p>Support: 0702 771 208 &nbsp;|&nbsp; &copy; 2026</p>
     </footer>
+
+    <!-- Floating WhatsApp button (desktop; mobile uses the bottom bar) -->
+    <a href="https://wa.me/256702771208?text=Hello%20Marine%20Shoppers!%20Here%20is%20my%20shopping%20list:%0A1.%20"
+       class="whatsapp-fab" aria-label="Chat with Marine Shoppers on WhatsApp" target="_blank" rel="noopener">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c-.003 1.396.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.005-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+        </svg>
+    </a>
+
+    <!-- Bottom mobile nav -->
+    <nav class="bottom-nav" aria-label="Primary">
+        <a href="#home" class="active">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v9.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V10"/></svg>
+            <span>Home</span>
+        </a>
+        <a href="#departments">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+            <span>Departments</span>
+        </a>
+        <a href="https://wa.me/256702771208?text=Hello%20Marine%20Shoppers!%20Here%20is%20my%20shopping%20list:%0A1.%20" class="bottom-nav-whatsapp" aria-label="Order on WhatsApp">
+            <svg viewBox="0 0 16 16" fill="currentColor"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c-.003 1.396.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592z"/></svg>
+        </a>
+        <a href="#location">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Location</span>
+        </a>
+        <a href="tel:+256702771208">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <span>Call</span>
+        </a>
+    </nav>
+
+    <script>
+        document.getElementById('hamburgerBtn').addEventListener('click', function () {
+            var nav = document.getElementById('navLinks');
+            var expanded = this.getAttribute('aria-expanded') === 'true';
+            this.setAttribute('aria-expanded', String(!expanded));
+            nav.classList.toggle('open');
+        });
+    </script>
 
 </body>
 </html>
